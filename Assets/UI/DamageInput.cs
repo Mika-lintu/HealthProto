@@ -5,11 +5,14 @@ using UnityEngine;
 public class DamageInput : MonoBehaviour {
     ObjectHealth cube;
     
+	/*
+	* THIS SCRIPT SENDS RANDOMISED DAMAGE VALUE TO OBJECT HEALTH SCRIPT WHEN CLICKED
+	*/
+	
     void Start () {
         cube = GetComponent<ObjectHealth>();
 	}
 	
-//When a object is clicked this randomises damage object takes and calls other script to take damage
 	void Update () {
         float damageToMake = Random.Range(0, 20);
 
