@@ -17,6 +17,13 @@ public class TextEffect : MonoBehaviour
     Vector3 startPosition = new Vector3(0, 22, 0);
     Vector3 endPosition = new Vector3(0, 100, 0);
     
+    /*
+    * THIS SCRIPT:
+    * - GETS THE DAMAGE VALUE AND SETS IT AS TEXT VALUE
+    * - USES COROUTINES TO CHANGE THE TEXT COLOR VALUES AND MOVES IT UPWARDS
+    * - OBJECT'S POSITION GETS REFRESHED AFTER THE COROUTINE IS FINISHED
+    */
+    
     void Awake()
     {
         popupText = GetComponent<Text>();
@@ -37,10 +44,7 @@ public class TextEffect : MonoBehaviour
             StartCoroutine(Damage());
         }
     }
-    public void PopupEffect(string miss)
-    {
-       
-    }
+
     public void ResetText()
     {
         transform.position = transform.parent.position;
