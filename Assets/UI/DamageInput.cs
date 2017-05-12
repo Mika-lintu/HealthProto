@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class DamageInput : MonoBehaviour {
     ObjectHealth cube;
-    //public int damage;
-
+    
     void Start () {
         cube = GetComponent<ObjectHealth>();
 	}
 	
-	
+//When a object is clicked this randomises damage object takes and calls other script to take damage
 	void Update () {
         float damageToMake = Random.Range(0, 20);
 
